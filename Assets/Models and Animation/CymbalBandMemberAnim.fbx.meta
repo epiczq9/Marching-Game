@@ -1,29 +1,29 @@
 fileFormatVersion: 2
-guid: 3d168d60c5ecb984aa2062f1793ff8a8
+guid: 23605afb827e31549b0461d298bc3ac2
 ModelImporter:
   serializedVersion: 20300
   internalIDToNameTable:
   - first:
-      74: 2704076734544249436
-    second: Drumstick2|Drumstick1Action
+      74: 5911559423710028187
+    second: Armature|CymbalBandAnim
   - first:
-      74: 4496796248114524057
-    second: Drumstick2|Drumstick2Action
+      74: 1379723835679457690
+    second: Armature|CymbalL
   - first:
-      74: -1571630895122162560
-    second: Drumstick1|Drumstick1Action
+      74: -2025336723314651558
+    second: Armature|CymbalR
   - first:
-      74: 3656039746229847452
-    second: Drumstick1|Drumstick2Action
+      74: -7377329101683669755
+    second: CymbalR|CymbalL
   - first:
-      74: 885944232402757753
-    second: Armature|Action
+      74: 3017232436397272033
+    second: CymbalR|CymbalR
   - first:
-      74: 5280386044974476517
-    second: Armature|Drumstick1Action
+      74: 5701966581626890900
+    second: CymbalL|CymbalL
   - first:
-      74: 1772493032772412822
-    second: Armature|Drumstick2Action
+      74: -109109519146938934
+    second: CymbalL|CymbalR
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -53,8 +53,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Drumstick2|Drumstick1Action
-      takeName: Drumstick2|Drumstick1Action
+      name: Armature|CymbalBandAnim
+      takeName: Armature|CymbalBandAnim
       internalID: 0
       firstFrame: 0
       lastFrame: 1
@@ -82,8 +82,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Drumstick2|Drumstick2Action
-      takeName: Drumstick2|Drumstick2Action
+      name: Armature|CymbalL
+      takeName: Armature|CymbalL
       internalID: 0
       firstFrame: 0
       lastFrame: 1
@@ -111,8 +111,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Drumstick1|Drumstick1Action
-      takeName: Drumstick1|Drumstick1Action
+      name: Armature|CymbalR
+      takeName: Armature|CymbalR
       internalID: 0
       firstFrame: 0
       lastFrame: 1
@@ -140,8 +140,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Drumstick1|Drumstick2Action
-      takeName: Drumstick1|Drumstick2Action
+      name: CymbalR|CymbalL
+      takeName: CymbalR|CymbalL
       internalID: 0
       firstFrame: 0
       lastFrame: 1
@@ -169,37 +169,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|Action
-      takeName: Armature|Action
-      internalID: 0
-      firstFrame: 0
-      lastFrame: 1.167
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Armature|Drumstick1Action
-      takeName: Armature|Drumstick1Action
+      name: CymbalR|CymbalR
+      takeName: CymbalR|CymbalR
       internalID: 0
       firstFrame: 0
       lastFrame: 1
@@ -227,8 +198,37 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|Drumstick2Action
-      takeName: Armature|Drumstick2Action
+      name: CymbalL|CymbalL
+      takeName: CymbalL|CymbalL
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CymbalL|CymbalR
+      takeName: CymbalL|CymbalR
       internalID: 0
       firstFrame: 0
       lastFrame: 1

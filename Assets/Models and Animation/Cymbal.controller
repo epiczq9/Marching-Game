@@ -6,13 +6,13 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Drummer
+  m_Name: Cymbal
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
-    m_StateMachine: {fileID: 5965020491211352343}
+    m_StateMachine: {fileID: 5178755875048044927}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -22,7 +22,7 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1107 &5965020491211352343
+--- !u!1107 &5178755875048044927
 AnimatorStateMachine:
   serializedVersion: 6
   m_ObjectHideFlags: 1
@@ -32,8 +32,8 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 7378488615254627894}
-    m_Position: {x: 380, y: 120, z: 0}
+    m_State: {fileID: 6669867574991514655}
+    m_Position: {x: 330, y: 110, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -43,8 +43,8 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 7378488615254627894}
---- !u!1102 &7378488615254627894
+  m_DefaultState: {fileID: 6669867574991514655}
+--- !u!1102 &6669867574991514655
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
@@ -64,7 +64,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 885944232402757753, guid: 3d168d60c5ecb984aa2062f1793ff8a8, type: 3}
+  m_Motion: {fileID: 5911559423710028187, guid: 23605afb827e31549b0461d298bc3ac2, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
