@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class RadialFormation : FormationBase {
-    [SerializeField] private int _amount = 10;
-    [SerializeField] private float _radius = 1;
-    [SerializeField] private float _radiusGrowthMultiplier = 0;
-    [SerializeField] private float _rotations = 1;
-    [SerializeField] private int _rings = 1;
-    [SerializeField] private float _ringOffset = 1;
-    [SerializeField] private float _nthOffset = 0;
+    public int _amount = 10;
+    public float _radius = 1;
+    public float _radiusGrowthMultiplier = 0;
+    public float _rotations = 1;
+    public int _rings = 1;
+    public float _ringOffset = 1;
+    public float _nthOffset = 0;
 
     public override IEnumerable<Vector3> EvaluatePoints() {
         var amountPerRing = _amount / _rings;

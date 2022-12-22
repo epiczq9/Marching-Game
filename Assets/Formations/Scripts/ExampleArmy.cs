@@ -15,7 +15,7 @@ public class ExampleArmy : MonoBehaviour {
     }
 
     [SerializeField] private GameObject _unitPrefab;
-    [SerializeField] private float _unitSpeed = 2;
+    public float _unitSpeed = 2;
 
     private readonly List<GameObject> _spawnedUnits = new List<GameObject>();
     private List<Vector3> _points = new List<Vector3>();
@@ -23,6 +23,7 @@ public class ExampleArmy : MonoBehaviour {
 
     private void Awake() {
         _parent = new GameObject("Unit Parent").transform;
+        _parent.tag = "UnitParent";
     }
 
     private void Update() {

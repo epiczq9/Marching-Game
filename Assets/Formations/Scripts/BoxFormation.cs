@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BoxFormation : FormationBase {
-    [SerializeField] private int _unitWidth = 5;
-    [SerializeField] private int _unitDepth = 5;
-    [SerializeField] private bool _hollow = false;
-    [SerializeField] private float _nthOffset = 0;
+    public int _unitWidth = 5;
+    public int _unitDepth = 5;
+    public bool _hollow = false;
+    public float _nthOffset = 0;
 
     public override IEnumerable<Vector3> EvaluatePoints() {
         var middleOffset = new Vector3(_unitWidth * 0.5f, 0, _unitDepth * 0.5f);
