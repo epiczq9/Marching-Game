@@ -19,15 +19,17 @@ public class ExampleArmy : MonoBehaviour {
 
     private readonly List<GameObject> _spawnedUnits = new List<GameObject>();
     private List<Vector3> _points = new List<Vector3>();
-    private Transform _parent;
+    public Transform _parent;
 
     private void Awake() {
         _parent = new GameObject("Unit Parent").transform;
         _parent.tag = "UnitParent";
+        _parent.gameObject.AddComponent<CheckMovingDown>();
     }
 
     private void Update() {
         SetFormation();
+        _parent.gameObject.GetComponent<CheckMovingDown>().movingDown = GetComponent<Movement>().movingDown;
     }
 
     private void SetFormation() {

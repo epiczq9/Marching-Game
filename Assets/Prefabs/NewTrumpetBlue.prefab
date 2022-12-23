@@ -1810,7 +1810,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1305437484188069621, guid: b05b20f6229375b4db03d59741f8812c, type: 3}
+  - {fileID: 2100000, guid: 42b93b1f31fbd004db806c92485d7a4f, type: 2}
   - {fileID: 7543773565881920961, guid: b05b20f6229375b4db03d59741f8812c, type: 3}
   - {fileID: -5042384440568991919, guid: b05b20f6229375b4db03d59741f8812c, type: 3}
   m_StaticBatchInfo:
@@ -1982,7 +1982,7 @@ GameObject:
   - component: {fileID: 582284242820930615}
   - component: {fileID: 6752654970339930342}
   m_Layer: 0
-  m_Name: NewTrumpet
+  m_Name: NewTrumpetBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

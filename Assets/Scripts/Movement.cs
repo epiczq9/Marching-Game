@@ -11,8 +11,9 @@ public class Movement : MonoBehaviour
     Transform unitParent;
     public List<GameObject> bandMemberList;
 
-    float timeToMove = 5f;
+    float timeToMove = 10f;
     public bool movingDown = true;
+    bool rotatedDown = true;
 
     ExampleArmy exampleArmy;
 
@@ -23,11 +24,13 @@ public class Movement : MonoBehaviour
     void Start() {
         exampleArmy = GetComponent<ExampleArmy>();
         TimersManager.SetTimer(this, 0.1f, StartGame);
+
+
     }
 
     void Update() {
         TapCheck();
-
+        RotationCheck();
         SpeedUpCheck();
     }
 
@@ -37,7 +40,7 @@ public class Movement : MonoBehaviour
             if (!spedUp) {
                 spedUp = true;
                 //exampleArmy._unitSpeed *= 2;
-                Time.timeScale *= 2;
+                Time.timeScale *= 1.3f;
             }
         }
     }
@@ -49,14 +52,52 @@ public class Movement : MonoBehaviour
             } else {
                 spedUp = false;
                 //exampleArmy._unitSpeed /= 2;
-                Time.timeScale /= 2;
+                Time.timeScale /= 1.3f;
+            }
+        }
+    }
+
+    void RotationStart() {
+        if (movingDown) {
+            foreach (Transform member in exampleArmy._parent) {
+                member.DORotate(new Vector3(0, 0, 0), 0.5f);
+                member.GetComponent<IndividualMember>().rotatedDown = true;
+            }
+        } else {
+            foreach (Transform member in exampleArmy._parent) {
+                member.DORotate(new Vector3(0, 180, 0), 0.5f);
+                member.GetComponent<IndividualMember>().rotatedDown = false;
+            }
+        }
+    }
+
+    void RotationCheck() {
+        if (movingDown) {
+            foreach (Transform member in exampleArmy._parent) {
+                if (!member.GetComponent<IndividualMember>().rotatedDown) {
+                    Debug.Log("Rotate Down");
+                    member.DORotate(new Vector3(0, 0, 0), 0.5f);
+                    member.GetComponent<IndividualMember>().rotatedDown = true;
+                }
+            }
+        } else {
+            foreach (Transform member in exampleArmy._parent) {
+                if (member.GetComponent<IndividualMember>().rotatedDown) {
+                    member.DORotate(new Vector3(0, 180, 0), 0.5f);
+                    member.GetComponent<IndividualMember>().rotatedDown = false;
+                }
             }
         }
     }
 
     void StartGame() {
+        RotationStart();
         unitParent = GameObject.FindGameObjectWithTag("UnitParent").transform;
-        MoveDown();
+        if (movingDown) {
+            MoveDown();
+        } else {
+            MoveUp();
+        }
     }
 
     void MoveDown() {
@@ -65,17 +106,7 @@ public class Movement : MonoBehaviour
     }
 
     void MoveUp() {
-        movingDown = false;
+        movingDown = false; 
         transform.DOMove(upperPos.position, timeToMove).SetEase(Ease.Linear).OnComplete(MoveDown);
-    }
-
-    void RotateAllMembersUp() {
-        foreach (Transform bandMember in unitParent) {
-            bandMember.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
-        }
-    }
-
-    void RotateAllMembersDown() {
-        
     }
 }

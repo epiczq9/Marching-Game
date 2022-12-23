@@ -7,21 +7,23 @@ public class IndividualMember : MonoBehaviour
 {
     public bool movingDown = true;
     Movement radialMovement;
-    bool rotatedDown = false;
+    public bool rotatedDown = false;
 
+    CheckMovingDown checkMD;
 
     void Start() {
-        if (rotatedDown) {
+        //checkMD = transform.parent.GetComponent<CheckMovingDown>();
+        /*if (rotatedDown) {
             transform.DORotate(new Vector3(0, 0, 0), 0.5f);
         } else {
             transform.DORotate(new Vector3(0, 180, 0), 0.5f);
-        }
-        radialMovement = GameObject.FindGameObjectWithTag("RadialArmy").GetComponent<Movement>();
+        }*/
+        //radialMovement = GameObject.FindGameObjectWithTag("RadialArmy").GetComponent<Movement>();
     }
 
 
     void Update() {
-        if (radialMovement.movingDown) {
+        /*if (checkMD.movingDown) {
             if (!rotatedDown) {
                 transform.DORotate(new Vector3(0, 0, 0), 0.5f);
                 rotatedDown = true;
@@ -31,7 +33,6 @@ public class IndividualMember : MonoBehaviour
                 transform.DORotate(new Vector3(0, 180, 0), 0.5f);
                 rotatedDown = false;
             }
-            
-        }
+        }*/
     }
 }
