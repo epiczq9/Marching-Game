@@ -5,4 +5,5 @@ using UnityEngine;
 public class CheckMovingDown : MonoBehaviour
 {
     public bool movingDown;
+    public GameObject exampleArmy;
 }

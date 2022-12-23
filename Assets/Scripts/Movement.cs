@@ -29,9 +29,9 @@ public class Movement : MonoBehaviour
     }
 
     void Update() {
-        TapCheck();
-        RotationCheck();
-        SpeedUpCheck();
+        //TapCheck();
+        //RotationCheck();
+        //SpeedUpCheck();
     }
 
     void TapCheck() {
@@ -40,7 +40,7 @@ public class Movement : MonoBehaviour
             if (!spedUp) {
                 spedUp = true;
                 //exampleArmy._unitSpeed *= 2;
-                Time.timeScale *= 1.3f;
+                Time.timeScale *= 2f;
             }
         }
     }
@@ -52,7 +52,7 @@ public class Movement : MonoBehaviour
             } else {
                 spedUp = false;
                 //exampleArmy._unitSpeed /= 2;
-                Time.timeScale /= 1.3f;
+                Time.timeScale = 1;
             }
         }
     }
@@ -75,7 +75,7 @@ public class Movement : MonoBehaviour
         if (movingDown) {
             foreach (Transform member in exampleArmy._parent) {
                 if (!member.GetComponent<IndividualMember>().rotatedDown) {
-                    Debug.Log("Rotate Down");
+                    //Debug.Log("Rotate Down");
                     member.DORotate(new Vector3(0, 0, 0), 0.5f);
                     member.GetComponent<IndividualMember>().rotatedDown = true;
                 }

@@ -6,33 +6,35 @@ using DG.Tweening;
 public class IndividualMember : MonoBehaviour
 {
     public bool movingDown = true;
-    Movement radialMovement;
     public bool rotatedDown = false;
+
+    GameObject exampleArmy;
 
     CheckMovingDown checkMD;
 
     void Start() {
-        //checkMD = transform.parent.GetComponent<CheckMovingDown>();
-        /*if (rotatedDown) {
-            transform.DORotate(new Vector3(0, 0, 0), 0.5f);
-        } else {
-            transform.DORotate(new Vector3(0, 180, 0), 0.5f);
-        }*/
-        //radialMovement = GameObject.FindGameObjectWithTag("RadialArmy").GetComponent<Movement>();
+        //StartRotation();
     }
 
 
     void Update() {
-        /*if (checkMD.movingDown) {
-            if (!rotatedDown) {
-                transform.DORotate(new Vector3(0, 0, 0), 0.5f);
-                rotatedDown = true;
-            }
+        //LookForward();
+    }
+
+    void StartRotation() {
+        checkMD = transform.parent.GetComponent<CheckMovingDown>();
+        rotatedDown = checkMD.movingDown;
+        if (rotatedDown) {
+            transform.DORotate(new Vector3(0, 0, 0), 0.5f);
         } else {
-            if (rotatedDown) {
-                transform.DORotate(new Vector3(0, 180, 0), 0.5f);
-                rotatedDown = false;
-            }
-        }*/
+            transform.DORotate(new Vector3(0, 180, 0), 0.5f);
+        }
+    }
+
+    public void LookForward() {
+        exampleArmy = transform.parent.GetComponent<CheckMovingDown>().exampleArmy;
+        Debug.Log(exampleArmy.transform.forward);
+        Quaternion newRotation = Quaternion.LookRotation(exampleArmy.transform.forward, Vector3.up);
+        transform.rotation = newRotation;
     }
 }
