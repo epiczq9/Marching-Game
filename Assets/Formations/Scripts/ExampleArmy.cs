@@ -30,7 +30,9 @@ public class ExampleArmy : MonoBehaviour {
 
     private void Update() {
         SetFormation();
-        _parent.gameObject.GetComponent<CheckMovingDown>().movingDown = GetComponent<Movement>().movingDown;
+        if(GetComponent<Movement>() != null) {
+            _parent.gameObject.GetComponent<CheckMovingDown>().movingDown = GetComponent<Movement>().movingDown;
+        }
         _parent.gameObject.GetComponent<CheckMovingDown>().exampleArmy = transform.gameObject;
     }
 
@@ -47,15 +49,18 @@ public class ExampleArmy : MonoBehaviour {
 
         for (var i = 0; i < _spawnedUnits.Count; i++) {
             _spawnedUnits[i].transform.position = Vector3.MoveTowards(_spawnedUnits[i].transform.position, transform.position + _points[i], _unitSpeed * Time.deltaTime);
-            if (GetComponent<Movement>().movingDown) {
-                if (!_spawnedUnits[i].GetComponent<IndividualMember>().rotatedDown) {
-                    _spawnedUnits[i].transform.DORotate(new Vector3(0, 0, 0), 0.5f);
-                    _spawnedUnits[i].GetComponent<IndividualMember>().rotatedDown = true;
-                }   
-            } else {
-                if (_spawnedUnits[i].GetComponent<IndividualMember>().rotatedDown) {
-                    _spawnedUnits[i].transform.DORotate(new Vector3(0, 180, 0), 0.5f);
-                    _spawnedUnits[i].GetComponent<IndividualMember>().rotatedDown = false;
+            _spawnedUnits[i].transform.rotation = Quaternion.LookRotation(_spawnedUnits[i].transform.position - transform.position + _points[i], Vector3.up);
+            if (GetComponent<Movement>() != null) {
+                if (GetComponent<Movement>().movingDown) {
+                    if (!_spawnedUnits[i].GetComponent<IndividualMember>().rotatedDown) {
+                        _spawnedUnits[i].transform.DORotate(new Vector3(0, 0, 0), 0.5f);
+                        _spawnedUnits[i].GetComponent<IndividualMember>().rotatedDown = true;
+                    }
+                } else {
+                    if (_spawnedUnits[i].GetComponent<IndividualMember>().rotatedDown) {
+                        _spawnedUnits[i].transform.DORotate(new Vector3(0, 180, 0), 0.5f);
+                        _spawnedUnits[i].GetComponent<IndividualMember>().rotatedDown = false;
+                    }
                 }
             }
         }
