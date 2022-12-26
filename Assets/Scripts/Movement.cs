@@ -13,13 +13,9 @@ public class Movement : MonoBehaviour
 
     float timeToMove = 10f;
     public bool movingDown = true;
-    bool rotatedDown = true;
+    //bool rotatedDown = true;
 
     ExampleArmy exampleArmy;
-
-    float tapTimerCurrent = 0;
-    float tapTimerMax = 2f;
-    bool spedUp = false;
 
     void Start() {
         exampleArmy = GetComponent<ExampleArmy>();

@@ -13,7 +13,7 @@ public class IndividualMember : MonoBehaviour
     CheckMovingDown checkMD;
 
     void Start() {
-        //StartRotation();
+        StartRotation();
     }
 
 
@@ -23,7 +23,7 @@ public class IndividualMember : MonoBehaviour
 
     void StartRotation() {
         checkMD = transform.parent.GetComponent<CheckMovingDown>();
-        rotatedDown = checkMD.movingDown;
+        //rotatedDown = checkMD.movingDown;
         if (rotatedDown) {
             transform.DORotate(new Vector3(0, 0, 0), 0.5f);
         } else {

@@ -49,7 +49,7 @@ public class ExampleArmy : MonoBehaviour {
 
         for (var i = 0; i < _spawnedUnits.Count; i++) {
             _spawnedUnits[i].transform.position = Vector3.MoveTowards(_spawnedUnits[i].transform.position, transform.position + _points[i], _unitSpeed * Time.deltaTime);
-            _spawnedUnits[i].transform.rotation = Quaternion.LookRotation(_spawnedUnits[i].transform.position - transform.position + _points[i], Vector3.up);
+            //_spawnedUnits[i].transform.rotation = Quaternion.LookRotation(_spawnedUnits[i].transform.position - transform.position + _points[i], Vector3.up);
             if (GetComponent<Movement>() != null) {
                 if (GetComponent<Movement>().movingDown) {
                     if (!_spawnedUnits[i].GetComponent<IndividualMember>().rotatedDown) {

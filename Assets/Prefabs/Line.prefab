@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7743417959066796861}
   - component: {fileID: 5215327510277113817}
+  - component: {fileID: 3929400397173827786}
   m_Layer: 0
   m_Name: Line
   m_TagString: Untagged
@@ -49,6 +50,22 @@ MonoBehaviour:
   pointA: {fileID: 4416938077401086278}
   pointB: {fileID: 4416938077765018817}
   membersList: []
+--- !u!114 &3929400397173827786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613546468027482216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef2f95aeac1014d4199f795a31791b1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lowerPos: {fileID: 0}
+  upperPos: {fileID: 0}
+  bandMemberList: []
+  movingDown: 1
 --- !u!1 &4416938077401086297
 GameObject:
   m_ObjectHideFlags: 0
