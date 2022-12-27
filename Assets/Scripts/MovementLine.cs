@@ -16,6 +16,8 @@ public class MovementLine : MonoBehaviour
 
     SpawnBetweenPoints theLine;
 
+    public bool formationSelected = false;
+
     void Start() {
         theLine = GetComponent<SpawnBetweenPoints>();
         TimersManager.SetTimer(this, 0.1f, StartGame);
@@ -59,6 +61,10 @@ public class MovementLine : MonoBehaviour
         }
     }
 
+    public void StartFormation() {
+        formationSelected = true;
+    }
+
     void StartGame() {
         RotationStart();
         if (movingDown) {
@@ -70,11 +76,27 @@ public class MovementLine : MonoBehaviour
 
     void MoveDown() {
         movingDown = true;
-        transform.DOMove(lowerPos.position, timeToMove).SetEase(Ease.Linear).OnComplete(MoveUp);
+        transform.DOMove(lowerPos.position, timeToMove).SetEase(Ease.Linear).OnComplete(FinishedDown);
+    }
+
+    void FinishedDown() {
+        if (formationSelected) {
+            GetComponent<LineFormation>().Phase1();
+        } else {
+            MoveUp();
+        }
     }
 
     void MoveUp() {
         movingDown = false;
-        transform.DOMove(upperPos.position, timeToMove).SetEase(Ease.Linear).OnComplete(MoveDown);
+        transform.DOMove(upperPos.position, timeToMove).SetEase(Ease.Linear).OnComplete(FinishedUp);
+    }
+
+    void FinishedUp() {
+        if (formationSelected) {
+            GetComponent<LineFormation>().Phase1();
+        } else {
+            MoveDown();
+        }
     }
 }
