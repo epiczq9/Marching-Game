@@ -1982,7 +1982,7 @@ GameObject:
   - component: {fileID: 582284242820930615}
   - component: {fileID: -5765615703319504227}
   m_Layer: 0
-  m_Name: asdas
+  m_Name: HarryParth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2017,7 +2017,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 0}
   endOfPathInstruction: 0
-  speed: 1
+  speed: 0
   distanceTravelled: 0
 --- !u!1 &4105984568898419186
 GameObject:
