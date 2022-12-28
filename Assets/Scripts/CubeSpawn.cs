@@ -9,6 +9,7 @@ public class CubeSpawn : MonoBehaviour
     public PathCreator path2;
     public GameObject cubePrefab;
     public Transform cubeSpawnPos;
+    public int members;
 
     public List<GameObject> cubeList;
     
@@ -27,7 +28,7 @@ public class CubeSpawn : MonoBehaviour
     }
 
     public void SpawnCube() {
-        GameObject cube = Instantiate(cubePrefab, cubeSpawnPos);
+        GameObject cube = Instantiate(cubePrefab);
         cube.GetComponent<PathCreation.Examples.PathFollower>().pathCreator = path;
         if (cubeList.Count == 0) {
             cube.GetComponent<PathCreation.Examples.PathFollower>().distanceTravelled = 0;
@@ -39,7 +40,7 @@ public class CubeSpawn : MonoBehaviour
     }
 
     float NextCubePosition() {
-        return path.path.length / 50;
+        return path.path.length / members;
     }
 
     public void SwitchPaths(PathCreator newPath, GameObject cube) {
