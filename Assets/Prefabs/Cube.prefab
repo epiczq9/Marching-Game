@@ -110,4 +110,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 0}
   endOfPathInstruction: 0
-  speed: 5
+  speed: 0
+  distanceTravelled: 0
