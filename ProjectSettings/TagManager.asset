@@ -6,6 +6,7 @@ TagManager:
   tags:
   - UnitParent
   - RadialArmy
+  - SpawnController
   layers:
   - Default
   - TransparentFX

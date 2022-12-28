@@ -23,7 +23,8 @@ public class ExampleArmy : MonoBehaviour {
     public Transform _parent;
 
     private void Awake() {
-        _parent = new GameObject("Unit Parent").transform;
+        //_parent = new GameObject("Unit Parent").transform;
+        _parent = transform;
         _parent.tag = "UnitParent";
         _parent.gameObject.AddComponent<CheckMovingDown>();
     }
@@ -50,7 +51,7 @@ public class ExampleArmy : MonoBehaviour {
         for (var i = 0; i < _spawnedUnits.Count; i++) {
             _spawnedUnits[i].transform.position = Vector3.MoveTowards(_spawnedUnits[i].transform.position, transform.position + _points[i], _unitSpeed * Time.deltaTime);
             //_spawnedUnits[i].transform.rotation = Quaternion.LookRotation(_spawnedUnits[i].transform.position - transform.position + _points[i], Vector3.up);
-            if (GetComponent<Movement>() != null) {
+            /*if (GetComponent<Movement>() != null) {
                 if (GetComponent<Movement>().movingDown) {
                     if (!_spawnedUnits[i].GetComponent<IndividualMember>().rotatedDown) {
                         _spawnedUnits[i].transform.DORotate(new Vector3(0, 0, 0), 0.5f);
@@ -62,7 +63,7 @@ public class ExampleArmy : MonoBehaviour {
                         _spawnedUnits[i].GetComponent<IndividualMember>().rotatedDown = false;
                     }
                 }
-            }
+            }*/
         }
     }
 

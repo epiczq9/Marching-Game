@@ -13,7 +13,7 @@ public class IndividualMember : MonoBehaviour
     CheckMovingDown checkMD;
 
     void Start() {
-        StartRotation();
+        //  StartRotation();
     }
 
 
@@ -22,7 +22,7 @@ public class IndividualMember : MonoBehaviour
     }
 
     void StartRotation() {
-        checkMD = transform.parent.GetComponent<CheckMovingDown>();
+        //checkMD = transform.parent.GetComponent<CheckMovingDown>();
         //rotatedDown = checkMD.movingDown;
         if (rotatedDown) {
             transform.DORotate(new Vector3(0, 0, 0), 0.5f);
@@ -32,7 +32,8 @@ public class IndividualMember : MonoBehaviour
     }
 
     public void LookForward() {
-        exampleArmy = transform.parent.GetComponent<CheckMovingDown>().exampleArmy;
+        //exampleArmy = transform.parent.GetComponent<CheckMovingDown>().exampleArmy;
+        exampleArmy = transform.parent.gameObject;
         Debug.Log(exampleArmy.transform.forward);
         Quaternion newRotation = Quaternion.LookRotation(exampleArmy.transform.forward, Vector3.up);
         transform.rotation = newRotation;

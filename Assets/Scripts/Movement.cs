@@ -31,12 +31,12 @@ public class Movement : MonoBehaviour
 
     void RotationStart() {
         if (movingDown) {
-            foreach (Transform member in exampleArmy._parent) {
+            foreach (Transform member in transform) {
                 member.DORotate(new Vector3(0, 0, 0), 0.5f);
                 member.GetComponent<IndividualMember>().rotatedDown = true;
             }
         } else {
-            foreach (Transform member in exampleArmy._parent) {
+            foreach (Transform member in transform) {
                 member.DORotate(new Vector3(0, 180, 0), 0.5f);
                 member.GetComponent<IndividualMember>().rotatedDown = false;
             }
@@ -64,7 +64,7 @@ public class Movement : MonoBehaviour
 
     void StartGame() {
         RotationStart();
-        unitParent = GameObject.FindGameObjectWithTag("UnitParent").transform;
+        //unitParent = GameObject.FindGameObjectWithTag("UnitParent").transform;
         if (movingDown) {
             MoveDown();
         } else {

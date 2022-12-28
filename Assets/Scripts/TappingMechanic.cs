@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class TappingMechanic : MonoBehaviour
 {
+    public float currentTimescale;
     float tapTimerCurrent = 0f;
-    readonly float tapTimerMax = 4f;
+    readonly float tapTimerMax = 1.5f;
     bool spedUp = false;
 
     void Start() {
@@ -24,7 +25,7 @@ public class TappingMechanic : MonoBehaviour
             if (!spedUp) {
                 spedUp = true;
                 //exampleArmy._unitSpeed *= 2;
-                Time.timeScale = 2f;
+                Time.timeScale *= 2f;
             }
         }
     }
@@ -32,11 +33,11 @@ public class TappingMechanic : MonoBehaviour
     void SpeedUpCheck() {
         if (spedUp) {
             if (tapTimerCurrent < tapTimerMax) {
-                tapTimerCurrent += Time.deltaTime;
+                tapTimerCurrent += Time.deltaTime / Time.timeScale;
             } else {
                 spedUp = false;
                 //exampleArmy._unitSpeed /= 2;
-                Time.timeScale = 1;
+                Time.timeScale /= 2f;
             }
         }
     }

@@ -10,6 +10,7 @@ public class SpawnBetweenPoints : MonoBehaviour
     Vector3 instantiatePosition;
     float lerpValue = 0;
     float distance = 0;
+    public int numMember = 0;
     int segmentsToCreate;
     public List<GameObject> membersList;
 
@@ -51,6 +52,16 @@ public class SpawnBetweenPoints : MonoBehaviour
             newMember.transform.eulerAngles = Vector3.zero;
             membersList.Add(newMember);
         }
+        //SpawnMember();
+    }
+
+    void SpawnMember() {
+        lerpValue += distance * numMember;
+        instantiatePosition = Vector3.Lerp(pointA.position, pointB.position, lerpValue);
+        GameObject newMember = Instantiate(memberPrefab, instantiatePosition, transform.rotation);
+        newMember.transform.parent = transform;
+        newMember.transform.eulerAngles = Vector3.zero;
+        membersList.Add(newMember);
     }
 
     void Move() {
