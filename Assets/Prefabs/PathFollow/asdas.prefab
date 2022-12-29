@@ -489,7 +489,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500645558076753609}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0.7071068, y: -0.7071068, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -497,7 +497,7 @@ Transform:
   - {fileID: 496195203006190640}
   m_Father: {fileID: 582284242820930615}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 90}
 --- !u!95 &5184316535347296743
 Animator:
   serializedVersion: 3
@@ -1982,7 +1982,7 @@ GameObject:
   - component: {fileID: 582284242820930615}
   - component: {fileID: -5765615703319504227}
   m_Layer: 0
-  m_Name: HarryParth
+  m_Name: asdas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
