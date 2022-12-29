@@ -32,10 +32,18 @@ public class SpawnController : MonoBehaviour
         /*foreach (GameObject row in rows) {
             row.GetComponent<MembersStarting>().UpdateMembers();
         }*/
-        if(activeMembers < membersMax) {
+        /*if (activeMembers < membersMax) {
             for (int i = 0; i < activeRows; i++) {
                 rows[i].GetComponent<MembersStarting>().UpdateMembers();
             }
+        }*/
+
+        for (int i = 0; i < activeRows; i++) {
+            if (!rows[i].GetComponent<MembersStarting>().IsRowFull()) {
+                rows[i].GetComponent<MembersStarting>().UpdateMembers();
+                break;
+            }
+
             activeMembers++;
         }
     }

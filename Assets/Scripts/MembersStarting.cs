@@ -10,7 +10,7 @@ public class MembersStarting : MonoBehaviour
     public bool rowActive = false;
 
     void Start() {
-        currentActiveMembers = spawnController.activeMembers;
+        currentActiveMembers = 2;
         Timers.TimersManager.SetTimer(this, 0.1f, InitializeMembers);
     }
 
@@ -33,14 +33,35 @@ public class MembersStarting : MonoBehaviour
         }*/
     }
 
-    public void UpdateMembers() {
-        if (spawnController.activeMembers < membersInRow.Count) {
-            membersInRow[spawnController.activeMembers].SetActive(true);
+    public bool IsRowFull() {
+        return currentActiveMembers == 10;
+    }
+
+    public void SpawnMembers() {
+        if (currentActiveMembers < membersInRow.Count) {
+            membersInRow[currentActiveMembers].SetActive(true);
         }
     }
 
-    public void RowSpawned() {
+    public void UpdateMembers() {
+        /*if (spawnController.activeMembers < membersInRow.Count) {
+            membersInRow[spawnController.activeMembers].SetActive(true);
+        }*/
+
+        if (currentActiveMembers < membersInRow.Count) {
+            membersInRow[currentActiveMembers].SetActive(true);
+            currentActiveMembers++;
+        }
+    }
+
+    /*public void RowSpawned() {
         for (int i = 0; i < spawnController.activeMembers; i++) {
+            membersInRow[i].SetActive(true);
+        }
+    }*/
+
+    public void RowSpawned() {
+        for (int i = 0; i < currentActiveMembers; i++) {
             membersInRow[i].SetActive(true);
         }
     }
