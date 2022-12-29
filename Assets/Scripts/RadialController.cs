@@ -30,6 +30,7 @@ public class RadialController : MonoBehaviour {
     float timerCurrent = 0;
     float timerMax = 4f;
     float lerpValue = 0f;
+    float formationTimer = 15f;
 
     bool moveToSmiley = false;
     bool moveToStar = false;
@@ -60,7 +61,7 @@ public class RadialController : MonoBehaviour {
                 transform.position = smileyPosition.position;
                 moveToSmiley = false;
                 timerCurrent = 0f;
-                Timers.TimersManager.SetTimer(this, 10f / Time.timeScale, ReturnToBase);
+                Timers.TimersManager.SetTimer(this, formationTimer / Time.timeScale, ReturnToBase);
             }
         }
 
@@ -79,7 +80,7 @@ public class RadialController : MonoBehaviour {
                 transform.eulerAngles = starPosition.eulerAngles;
                 moveToStar = false;
                 timerCurrent = 0f;
-                Timers.TimersManager.SetTimer(this, 10f / Time.timeScale, ReturnToBase);
+                Timers.TimersManager.SetTimer(this, formationTimer / Time.timeScale, ReturnToBase);
             }
         }
 
@@ -95,7 +96,7 @@ public class RadialController : MonoBehaviour {
                 transform.position = circlePosition.position;
                 moveToCircle = false;
                 timerCurrent = 0f;
-                Timers.TimersManager.SetTimer(this, 10f / Time.timeScale, ReturnToBase);
+                Timers.TimersManager.SetTimer(this, formationTimer / Time.timeScale, ReturnToBase);
             }
         }
 
