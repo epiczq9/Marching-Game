@@ -1675,6 +1675,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2635859591092597050}
   - component: {fileID: -4644339082735395141}
+  - component: {fileID: -1890119195502934956}
   m_Layer: 0
   m_Name: Cheerleader2
   m_TagString: Untagged
@@ -1704,13 +1705,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3505239423085964664}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab3b3be4c5ae4304abcc56eba30dc55f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movingDown: 1
   rotatedDown: 0
+--- !u!114 &-1890119195502934956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3505239423085964664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33aabe1a2dec93349b06e6e5dc51bc06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathCreator: {fileID: 0}
+  endOfPathInstruction: 0
+  speed: 1
+  distanceTravelled: 0
 --- !u!1 &3670894068471278050
 GameObject:
   m_ObjectHideFlags: 0
