@@ -52,7 +52,7 @@ public class ButtonBehaviour : MonoBehaviour
     public void AddRowButton() {
         spawnController.SpawnRow();
         gameController.money -= addRowPrice;
-        addRowPrice = (int)(addRowPrice * 1.2f);
+        addRowPrice = (int)(addRowPrice * 3f);
         UpdateText();
     }
 
@@ -65,7 +65,7 @@ public class ButtonBehaviour : MonoBehaviour
     public void AddMemberButton() {
         spawnController.SpawnMember();
         gameController.money -= addMemberPrice;
-        addMemberPrice = (int)(addMemberPrice * 1.2f);
+        addMemberPrice = (int)(addMemberPrice * 2f);
         UpdateText();
     }
 
