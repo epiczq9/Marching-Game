@@ -2399,6 +2399,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3781299561320381784}
   - component: {fileID: 7846301241194165176}
+  - component: {fileID: -287818828590624705}
+  - component: {fileID: -5268847533816316395}
+  - component: {fileID: -8927064127039776621}
   m_Layer: 0
   m_Name: Cheerleader1
   m_TagString: Untagged
@@ -2418,6 +2421,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4478982903932022999}
+  - {fileID: 56572657013941408}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2435,6 +2439,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movingDown: 1
   rotatedDown: 0
+--- !u!114 &-287818828590624705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5058952650848031669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4566c0753a0afed4bb35de1926d9ee3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worth: 4
+--- !u!136 &-5268847533816316395
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5058952650848031669}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.37
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-8927064127039776621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5058952650848031669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a987ae56a895591459c5b41e37f5c7cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsPopUpPrefab: {fileID: 8067938913261247048, guid: 9a66440aad8721e459f111b49080d7fa, type: 3}
+  popupPos: {fileID: 56572657013941408}
 --- !u!1 &5152148601629303916
 GameObject:
   m_ObjectHideFlags: 0
@@ -2556,6 +2601,36 @@ Transform:
   m_Children:
   - {fileID: 3730486115434804921}
   m_Father: {fileID: 7053446290003073878}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5225718479827468620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 56572657013941408}
+  m_Layer: 0
+  m_Name: PopUpPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &56572657013941408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5225718479827468620}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 6.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3781299561320381784}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5260480626739807552

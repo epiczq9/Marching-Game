@@ -9,7 +9,8 @@ public class SpawnController : MonoBehaviour
     public List<GameObject> bandMembers;
     readonly int membersMax = 10;
     public int activeMembers = 0;
-    int activeRows = 0;
+    public int activeRows = 0;
+    public bool inBase = true;
     
     void Start() {
         Timers.TimersManager.SetTimer(this, 0.15f, StartGame);

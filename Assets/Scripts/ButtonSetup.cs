@@ -37,7 +37,7 @@ public class ButtonSetup : MonoBehaviour
     }
 
     void SetupFormationButton() {
-        if (gameController.money >= buttonBehaviour.formationPrice && spawnController.IsEverythingFull()) {
+        if (gameController.money >= buttonBehaviour.formationPrice && spawnController.activeRows >= 4 && spawnController.AreMembersFull() && spawnController.inBase) {
             ActivateButton(formationButton);
         } else {
             DeactivateButton(formationButton);
@@ -45,7 +45,7 @@ public class ButtonSetup : MonoBehaviour
     }
 
     void SetupAddRowButton() {
-        if (gameController.money >= buttonBehaviour.addRowPrice && !spawnController.AreRowsFull()) {
+        if (gameController.money >= buttonBehaviour.addRowPrice && spawnController.inBase && !spawnController.AreRowsFull()) {
             ActivateButton(addRowButton);
         } else {
             DeactivateButton(addRowButton);
@@ -53,7 +53,7 @@ public class ButtonSetup : MonoBehaviour
     }
 
     void SetupSpeedButton() {
-        if (gameController.money >= buttonBehaviour.increaseSpeedPrice) {
+        if (gameController.money >= buttonBehaviour.increaseSpeedPrice && spawnController.inBase) {
             ActivateButton(increaseSpeedButton);
         } else {
             DeactivateButton(increaseSpeedButton);
@@ -61,7 +61,7 @@ public class ButtonSetup : MonoBehaviour
     }
 
     void SetupAddMemberButton() {
-        if (gameController.money >= buttonBehaviour.addMemberPrice && !spawnController.AreMembersFull()) {
+        if (gameController.money >= buttonBehaviour.addMemberPrice && spawnController.inBase && !spawnController.AreMembersFull()) {
             ActivateButton(addMemberButton);
         } else {
             DeactivateButton(addMemberButton);

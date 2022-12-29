@@ -1107,6 +1107,9 @@ GameObject:
   m_Component:
   - component: {fileID: 745159982147326591}
   - component: {fileID: -2262097280233981755}
+  - component: {fileID: -5820516222291696184}
+  - component: {fileID: 791428157342154407}
+  - component: {fileID: -7386859145613614099}
   m_Layer: 0
   m_Name: SusPhoneBlue
   m_TagString: Untagged
@@ -1126,6 +1129,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2289468424143619332}
+  - {fileID: 1731315969261954913}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1143,6 +1147,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movingDown: 1
   rotatedDown: 0
+--- !u!114 &-5820516222291696184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2437819731626309045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4566c0753a0afed4bb35de1926d9ee3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worth: 1
+--- !u!136 &791428157342154407
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2437819731626309045}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.37
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-7386859145613614099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2437819731626309045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a987ae56a895591459c5b41e37f5c7cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsPopUpPrefab: {fileID: 8067938913261247048, guid: 9a66440aad8721e459f111b49080d7fa, type: 3}
+  popupPos: {fileID: 1731315969261954913}
 --- !u!1 &2454603455589563980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2994,6 +3039,36 @@ Transform:
   - {fileID: 1857863915146938692}
   m_Father: {fileID: 2299602794990888783}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6549902651122531522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1731315969261954913}
+  m_Layer: 0
+  m_Name: PopUpPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1731315969261954913
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6549902651122531522}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 6.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 745159982147326591}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6609764796280579976
 GameObject:

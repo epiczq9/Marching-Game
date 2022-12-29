@@ -18,7 +18,7 @@ public class ButtonBehaviour : MonoBehaviour
 
     public SpawnController spawnController;
     public GameController gameController;
-    public SmileyFormation smileyFormation;
+    public FormTheFormations theFormations;
     private void Start() {
         UpdateText();
     }
@@ -27,7 +27,23 @@ public class ButtonBehaviour : MonoBehaviour
         
     }
     public void FormationButton() {
-        smileyFormation.FormSmiley();
+        if (spawnController.AreMembersFull()) {
+            spawnController.inBase = false;
+            if (spawnController.activeRows == 4) {
+                theFormations.FormSmiley();
+            } else if (spawnController.activeRows == 5) {
+                theFormations.FormStar();
+            } else if (spawnController.AreRowsFull()) {
+                theFormations.FormCircles();
+            }
+        }
+        gameController.money -= formationPrice;
+        formationPrice = (int)(formationPrice * 1.3f);
+        UpdateText();
+    }
+
+    public void StarFormationButton() {
+        theFormations.FormStar();
         gameController.money -= formationPrice;
         formationPrice = (int)(formationPrice * 1.3f);
         UpdateText();
@@ -55,7 +71,7 @@ public class ButtonBehaviour : MonoBehaviour
 
 
 
-    void UpdateText() {
+    public void UpdateText() {
         if (spawnController.AreRowsFull()) {
             addRowPriceText.text = "MAX";
         } else {
@@ -68,9 +84,6 @@ public class ButtonBehaviour : MonoBehaviour
             addMemberPriceText.text = addMemberPrice.ToString();
         }
 
-        
-        
-        
         increaseSpeedPriceText.text = increaseSpeedPrice.ToString();
         formationPriceText.text = formationPrice.ToString();
         moneyText.text = gameController.money.ToString();

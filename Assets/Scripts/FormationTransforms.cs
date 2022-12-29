@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SmileyTransforms : MonoBehaviour
+public class FormationTransforms : MonoBehaviour
 {
     public GameObject formation;
     void Start() {
