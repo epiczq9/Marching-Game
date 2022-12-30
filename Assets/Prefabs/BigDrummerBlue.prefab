@@ -4271,7 +4271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4566c0753a0afed4bb35de1926d9ee3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  worth: 2
+  worth: 1
 --- !u!136 &-2744218371946311479
 CapsuleCollider:
   m_ObjectHideFlags: 0

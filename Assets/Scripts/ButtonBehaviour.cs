@@ -69,8 +69,6 @@ public class ButtonBehaviour : MonoBehaviour
         UpdateText();
     }
 
-
-
     public void UpdateText() {
         if (spawnController.AreRowsFull()) {
             addRowPriceText.text = "MAX";

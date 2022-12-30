@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class MembersStarting : MonoBehaviour
 {
-    public int currentActiveMembers;
+    public int currentActiveMembers = 2;
     public List<GameObject> membersInRow;
     public SpawnController spawnController;
+    ButtonBehaviour buttonBehaviour;
     public bool rowActive = false;
 
     void Start() {
+        buttonBehaviour = GameObject.FindGameObjectWithTag("ButtonBehaviour").GetComponent<ButtonBehaviour>();
         currentActiveMembers = 2;
         Timers.TimersManager.SetTimer(this, 0.1f, InitializeMembers);
     }
@@ -40,6 +42,7 @@ public class MembersStarting : MonoBehaviour
     public void SpawnMembers() {
         if (currentActiveMembers < membersInRow.Count) {
             membersInRow[currentActiveMembers].SetActive(true);
+            buttonBehaviour.UpdateText();
         }
     }
 
