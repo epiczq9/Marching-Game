@@ -15,6 +15,7 @@ public class MoneyGate : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other) {
         Debug.Log(other.gameObject.name);
+        Worth(other.gameObject);
         money = other.gameObject.GetComponent<MemberWorth>().worth;
         //buttonBehaviour.UpdateText();
         other.gameObject.GetComponent<UISpawn>().SpawnPointUI();
@@ -28,5 +29,16 @@ public class MoneyGate : MonoBehaviour
         buttonBehaviour.UpdateText();
     }
 
+    void Worth(GameObject member) {
+        if (member.transform.parent.GetComponent<RadialController>().smileyMode) {
+            member.GetComponent<MemberWorth>().ChangeWorth(2);
+        } else if (member.transform.parent.GetComponent<RadialController>().starMode) {
+            member.GetComponent<MemberWorth>().ChangeWorth(3);
+        } else if (member.transform.parent.GetComponent<RadialController>().circleMode) {
+            member.GetComponent<MemberWorth>().ChangeWorth(4);
+        } else {
+            member.GetComponent<MemberWorth>().ChangeWorth(1);
+        }
+    }
 
 }

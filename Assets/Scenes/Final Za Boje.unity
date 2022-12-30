@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.2850269, g: 0.3713935, b: 0.49601045, a: 1}
+  m_IndirectSpecularColor: {r: 0.28502658, g: 0.37139305, b: 0.4960094, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3216,7 +3216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &792457273
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3250,7 +3250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5519224, g: 0.8613365, b: 0.9528302, a: 1}
+  m_Color: {r: 0.5647059, g: 0.9960785, b: 0.9960785, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3474,7 +3474,7 @@ PrefabInstance:
     - target: {fileID: 5568599887042208713, guid: ceaaf1c72c53921479f5cbed0872d71e, type: 3}
       propertyPath: _unitPrefab
       value: 
-      objectReference: {fileID: 8790090256976015954, guid: 7cae15ab2c8e95a4b9d54e9553ddef66, type: 3}
+      objectReference: {fileID: 8790090256976015954, guid: 13939fb438cdd764781a1f8114c25c8c, type: 3}
     - target: {fileID: 5568599887042208718, guid: ceaaf1c72c53921479f5cbed0872d71e, type: 3}
       propertyPath: m_Name
       value: Radial Army 4
@@ -4527,6 +4527,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HandCursorCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7282348759904639325, guid: 25ed287e3658cfb419982f1352ec1d36, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25ed287e3658cfb419982f1352ec1d36, type: 3}
 --- !u!1 &1157549189
@@ -5158,7 +5162,7 @@ PrefabInstance:
     - target: {fileID: 5568599887042208713, guid: ceaaf1c72c53921479f5cbed0872d71e, type: 3}
       propertyPath: _unitPrefab
       value: 
-      objectReference: {fileID: 3505239423085964664, guid: d8976f4c649eb8245ad259af88d28eab, type: 3}
+      objectReference: {fileID: 3505239423085964664, guid: 9cd1e11b5e8b08041bcc96b800f79223, type: 3}
     - target: {fileID: 5568599887042208718, guid: ceaaf1c72c53921479f5cbed0872d71e, type: 3}
       propertyPath: m_Name
       value: Radial Army 2
@@ -6063,7 +6067,7 @@ PrefabInstance:
     - target: {fileID: 5568599887042208713, guid: ceaaf1c72c53921479f5cbed0872d71e, type: 3}
       propertyPath: _unitPrefab
       value: 
-      objectReference: {fileID: 5649690314864088750, guid: a32a94f127444e548831d4edf7175111, type: 3}
+      objectReference: {fileID: 5649690314864088750, guid: 0893e73b2a1aaee4abb32af5fdc6b0c7, type: 3}
     - target: {fileID: 5568599887042208718, guid: ceaaf1c72c53921479f5cbed0872d71e, type: 3}
       propertyPath: m_Name
       value: Radial Army 1
@@ -6803,7 +6807,7 @@ PrefabInstance:
     - target: {fileID: 5568599887042208713, guid: ceaaf1c72c53921479f5cbed0872d71e, type: 3}
       propertyPath: _unitPrefab
       value: 
-      objectReference: {fileID: 3505239423085964664, guid: 9cd1e11b5e8b08041bcc96b800f79223, type: 3}
+      objectReference: {fileID: 5058952650848031669, guid: a74772fa89a7f374c90a887a31300835, type: 3}
     - target: {fileID: 5568599887042208718, guid: ceaaf1c72c53921479f5cbed0872d71e, type: 3}
       propertyPath: m_Name
       value: Radial Army 3
@@ -8302,7 +8306,7 @@ PrefabInstance:
     - target: {fileID: 5568599887042208713, guid: ceaaf1c72c53921479f5cbed0872d71e, type: 3}
       propertyPath: _unitPrefab
       value: 
-      objectReference: {fileID: 2437819731626309045, guid: c1d417f195bfd4541ab2323235dad4aa, type: 3}
+      objectReference: {fileID: 4026258106625672030, guid: 9eb5df12c63e4384383bb60e99554e28, type: 3}
     - target: {fileID: 5568599887042208718, guid: ceaaf1c72c53921479f5cbed0872d71e, type: 3}
       propertyPath: m_Name
       value: Radial Army 5

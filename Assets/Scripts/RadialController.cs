@@ -37,9 +37,9 @@ public class RadialController : MonoBehaviour {
     bool moveToCircle = false;
     bool moveToBase = false;
 
-    bool smileyMode = false;
-    bool starMode = false;
-    bool circleMode = false;
+    public bool smileyMode = false;
+    public bool starMode = false;
+    public bool circleMode = false;
 
     void Start() {
         radialFormation = GetComponent<RadialFormation>();
