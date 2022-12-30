@@ -27,7 +27,7 @@ public class ButtonBehaviour : MonoBehaviour
         
     }
     public void FormationButton() {
-        if (spawnController.AreMembersFull()) {
+        if (spawnController.AreMembersFull2()) {
             spawnController.inBase = false;
             if (spawnController.activeRows == 4) {
                 theFormations.FormSmiley();

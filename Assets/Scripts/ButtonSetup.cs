@@ -37,7 +37,7 @@ public class ButtonSetup : MonoBehaviour
     }
 
     void SetupFormationButton() {
-        if (gameController.money >= buttonBehaviour.formationPrice && spawnController.activeRows >= 4 && spawnController.AreMembersFull() && spawnController.inBase) {
+        if (gameController.money >= buttonBehaviour.formationPrice && spawnController.activeRows >= 4 && spawnController.AreMembersFull2() && spawnController.inBase) {
             ActivateButton(formationButton);
         } else {
             DeactivateButton(formationButton);
