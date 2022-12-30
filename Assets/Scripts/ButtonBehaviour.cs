@@ -52,7 +52,7 @@ public class ButtonBehaviour : MonoBehaviour
     public void AddRowButton() {
         spawnController.SpawnRow();
         gameController.money -= addRowPrice;
-        addRowPrice = (int)(addRowPrice * 3f);
+        addRowPrice = (int)(addRowPrice * 2f);
         UpdateText();
     }
 
@@ -65,7 +65,7 @@ public class ButtonBehaviour : MonoBehaviour
     public void AddMemberButton() {
         spawnController.SpawnMember();
         gameController.money -= addMemberPrice;
-        addMemberPrice = (int)(addMemberPrice * 2f);
+        addMemberPrice = (int)(addMemberPrice * 1.2f);
         UpdateText();
     }
 
@@ -78,8 +78,19 @@ public class ButtonBehaviour : MonoBehaviour
             addRowPriceText.text = addRowPrice.ToString();
         }
 
-        if (spawnController.AreMembersFull()) {
+        /*if (spawnController.AreMembersFull2() && spawnController.AreRowsFull()) {
             addMemberPriceText.text = "MAX";
+        } else {
+            addMemberPriceText.text = addMemberPrice.ToString();
+        }*/
+
+        if (spawnController.AreMembersFull2()) {
+            if (spawnController.AreRowsFull()) {
+                addMemberPriceText.text = "MAX";
+            } else {
+                addMemberPriceText.text = "ROW FULL";
+            }
+            
         } else {
             addMemberPriceText.text = addMemberPrice.ToString();
         }

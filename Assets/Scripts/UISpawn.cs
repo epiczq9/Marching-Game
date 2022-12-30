@@ -10,6 +10,6 @@ public class UISpawn : MonoBehaviour {
     public void SpawnPointUI() {
         int points = GetComponent<MemberWorth>().worth;
         GameObject popup = Instantiate(pointsPopUpPrefab, popupPos);
-        popup.GetComponent<TMP_Text>().text = "+ " + points.ToString();
+        popup.GetComponent<TMP_Text>().text = "+" + points.ToString();
     }
 }

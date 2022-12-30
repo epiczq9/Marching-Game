@@ -7,9 +7,13 @@ using TMPro;
 
 public class FloatingText : MonoBehaviour {
 
+    MoneyGate moneyGate;
+    public Transform popupFinishPos;
+
     void Start() {
-        TimersManager.SetTimer(this, 2f, DestroyText);
-        //transform.DOMoveY(1.7f, 0.5f);
+        moneyGate = GameObject.FindGameObjectWithTag("MoneyGate").GetComponent<MoneyGate>();
+        popupFinishPos = GameObject.FindGameObjectWithTag("PopUpFinish").transform;
+        PopUpMove();
     }
 
     private void Update() {
@@ -20,6 +24,17 @@ public class FloatingText : MonoBehaviour {
         transform.rotation = Quaternion.LookRotation(Camera.main.transform.forward);
     }
 
+
+    void PopUpMove() {
+        Sequence popUpSequence = DOTween.Sequence();
+        popUpSequence.Append(transform.DOMoveY(8.17f, 1f));
+        popUpSequence.Append(transform.DOMove(popupFinishPos.position, 1f).SetEase(Ease.InCubic)).OnComplete(AddPoints);
+    }
+
+    void AddPoints() {
+        DestroyText();
+        moneyGate.AddPoints();
+    }
     void DestroyText() {
         Destroy(gameObject);
     }

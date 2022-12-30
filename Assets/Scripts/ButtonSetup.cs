@@ -61,7 +61,7 @@ public class ButtonSetup : MonoBehaviour
     }
 
     void SetupAddMemberButton() {
-        if (gameController.money >= buttonBehaviour.addMemberPrice && spawnController.inBase && !spawnController.AreMembersFull()) {
+        if (gameController.money >= buttonBehaviour.addMemberPrice && spawnController.inBase && !spawnController.AreMembersFull2()) {
             ActivateButton(addMemberButton);
         } else {
             DeactivateButton(addMemberButton);

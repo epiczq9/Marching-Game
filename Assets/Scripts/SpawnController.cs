@@ -11,6 +11,7 @@ public class SpawnController : MonoBehaviour
     public int activeMembers = 0;
     public int activeRows = 0;
     public bool inBase = true;
+    public bool noRoomForMembers = false;
     
     void Start() {
         Timers.TimersManager.SetTimer(this, 0.15f, StartGame);
@@ -57,6 +58,15 @@ public class SpawnController : MonoBehaviour
 
     public bool AreMembersFull() {
         return (activeMembers == membersMax);
+    }
+
+    public bool AreMembersFull2() {
+        for (int i = 0; i < activeRows; i++) {
+            if (!rows[i].GetComponent<MembersStarting>().IsRowFull()) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public bool AreRowsFull() {

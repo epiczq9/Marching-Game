@@ -8,6 +8,8 @@ TagManager:
   - RadialArmy
   - SpawnController
   - ButtonBehaviour
+  - PopUpFinish
+  - MoneyGate
   layers:
   - Default
   - TransparentFX

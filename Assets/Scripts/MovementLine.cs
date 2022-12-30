@@ -12,7 +12,7 @@ public class MovementLine : MonoBehaviour
 
     float timeToMove = 10f;
     public bool movingDown = true;
-    bool rotatedDown = true;
+    //bool rotatedDown = true;
 
     SpawnBetweenPoints theLine;
 
