@@ -876,6 +876,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimersManager
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1625f9ca5072db649b6821514e7d1d48, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1625f9ca5072db649b6821514e7d1d48, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -2408,6 +2412,9 @@ MonoBehaviour:
   smileyPosition: {fileID: 0}
   starPosition: {fileID: 1970358183}
   circlePosition: {fileID: 1330164744}
+  smileyMode: 0
+  starMode: 0
+  circleMode: 0
 --- !u!114 &619069421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3539,6 +3546,9 @@ MonoBehaviour:
   smileyPosition: {fileID: 988015149}
   starPosition: {fileID: 1219498394}
   circlePosition: {fileID: 1330164744}
+  smileyMode: 0
+  starMode: 0
+  circleMode: 0
 --- !u!114 &903772033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5227,6 +5237,9 @@ MonoBehaviour:
   smileyPosition: {fileID: 2084839207}
   starPosition: {fileID: 2067972030}
   circlePosition: {fileID: 1330164744}
+  smileyMode: 0
+  starMode: 0
+  circleMode: 0
 --- !u!114 &1231360722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6218,6 +6231,9 @@ MonoBehaviour:
   smileyPosition: {fileID: 1703388667}
   starPosition: {fileID: 274553130}
   circlePosition: {fileID: 1330164744}
+  smileyMode: 0
+  starMode: 0
+  circleMode: 0
 --- !u!114 &1393692168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6396,6 +6412,9 @@ MonoBehaviour:
   smileyPosition: {fileID: 0}
   starPosition: {fileID: 0}
   circlePosition: {fileID: 0}
+  smileyMode: 0
+  starMode: 0
+  circleMode: 0
 --- !u!114 &1404345798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6707,6 +6726,9 @@ MonoBehaviour:
   smileyPosition: {fileID: 1703388667}
   starPosition: {fileID: 274553130}
   circlePosition: {fileID: 1330164744}
+  smileyMode: 0
+  starMode: 0
+  circleMode: 0
 --- !u!114 &1449330119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6872,6 +6894,9 @@ MonoBehaviour:
   smileyPosition: {fileID: 2000011525}
   starPosition: {fileID: 8289357}
   circlePosition: {fileID: 1330164744}
+  smileyMode: 0
+  starMode: 0
+  circleMode: 0
 --- !u!114 &1544220852
 MonoBehaviour:
   m_ObjectHideFlags: 0
