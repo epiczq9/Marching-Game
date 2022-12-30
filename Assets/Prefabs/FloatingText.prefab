@@ -183,3 +183,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002402b2abbc70546b5108c5bf224e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popupFinishPos: {fileID: 0}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.2850269, g: 0.3713935, b: 0.49601045, a: 1}
+  m_IndirectSpecularColor: {r: 0.28502658, g: 0.37139305, b: 0.4960094, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1901,7 +1901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189bbb979a21a584f8313e4fab955728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 1000000
+  money: 0
 --- !u!4 &522609188
 Transform:
   m_ObjectHideFlags: 0
@@ -2408,6 +2408,9 @@ MonoBehaviour:
   smileyPosition: {fileID: 0}
   starPosition: {fileID: 1970358183}
   circlePosition: {fileID: 1330164744}
+  smileyMode: 0
+  starMode: 0
+  circleMode: 0
 --- !u!114 &619069421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3539,6 +3542,9 @@ MonoBehaviour:
   smileyPosition: {fileID: 988015149}
   starPosition: {fileID: 1219498394}
   circlePosition: {fileID: 1330164744}
+  smileyMode: 0
+  starMode: 0
+  circleMode: 0
 --- !u!114 &903772033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5223,6 +5229,9 @@ MonoBehaviour:
   smileyPosition: {fileID: 2084839207}
   starPosition: {fileID: 2067972030}
   circlePosition: {fileID: 1330164744}
+  smileyMode: 0
+  starMode: 0
+  circleMode: 0
 --- !u!114 &1231360722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6214,6 +6223,9 @@ MonoBehaviour:
   smileyPosition: {fileID: 1703388667}
   starPosition: {fileID: 274553130}
   circlePosition: {fileID: 1330164744}
+  smileyMode: 0
+  starMode: 0
+  circleMode: 0
 --- !u!114 &1393692168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6392,6 +6404,9 @@ MonoBehaviour:
   smileyPosition: {fileID: 0}
   starPosition: {fileID: 0}
   circlePosition: {fileID: 0}
+  smileyMode: 0
+  starMode: 0
+  circleMode: 0
 --- !u!114 &1404345798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6703,6 +6718,9 @@ MonoBehaviour:
   smileyPosition: {fileID: 1703388667}
   starPosition: {fileID: 274553130}
   circlePosition: {fileID: 1330164744}
+  smileyMode: 0
+  starMode: 0
+  circleMode: 0
 --- !u!114 &1449330119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6868,6 +6886,9 @@ MonoBehaviour:
   smileyPosition: {fileID: 2000011525}
   starPosition: {fileID: 8289357}
   circlePosition: {fileID: 1330164744}
+  smileyMode: 0
+  starMode: 0
+  circleMode: 0
 --- !u!114 &1544220852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8650,7 +8671,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974706190}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 489dbb8fd10032b45aea57fb4442bff3, type: 3}
   m_Name: 
